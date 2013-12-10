@@ -1,0 +1,26 @@
+{
+   "app": {
+      "launch": {
+         "local_path": "bscode.html"
+      }
+   },
+   "background_page": "storage.html",
+   "content_scripts": [ {
+      "all_frames": true,
+      "js": [ "js/jquery-1.4.4.min.js", "js/bscode.js", "js/bscode-cs.js" ],
+      "matches": [ "http://*/*", "https://*/*" ]
+   } ],
+   "description": "Simple \\code and \\\\macro engine for common web-forms.",
+   "icons": {
+      "128": "icon_128.png",
+      "16": "icon.png",
+      "48": "icon_48.png"
+   },
+   "key": "MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQClVb9xGcyZp3P4Fe+rpjGUqVrvRq8rqQl278gMjFzmxqD65cu7uf/erOBlFWbAc6YK15yvgnsYn+HDYvoSV4shajLAnytek7CI35nia5AnYACJsXW+JrfoT9pEgK9Zd4fE1XFr8bNCzhwKeoupH+gtMdvJ9lqAN4Xj/Tam5+QvzQIDAQAB",
+   "name": "wxfz\u2019s \\code",
+   "permissions": [ "http://*/*", "https://*/*", "tabs" ],
+   "update_url": "http://clients2.google.com/service/update2/crx",
+   "version": "2.1",
+   "manifest_version": 2
+   
+}

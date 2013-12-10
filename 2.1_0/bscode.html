@@ -1,0 +1,164 @@
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    <title class="bscode">wxfz\cqs \code</title>
+    <link rel="stylesheet"
+    href="css/bscodeui/jquery-ui-1.8.8.custom.css"
+    type="text/css" />
+    <link rel="stylesheet" href="css/blueprint/screen.css"
+    type="text/css" />
+    <link rel="stylesheet" href="css/blueprint/liquid.css"
+    type="text/css" />
+    <script type="text/javascript"
+    src="js/jquery-1.4.4.min.js"></script>
+    <script type="text/javascript"
+    src="js/jquery-ui-1.8.8.custom.min.js"></script>
+    <script type="text/javascript" src="js/bscode.js"></script>
+    <script type="text/javascript" src="js/chrome-ui.js"></script>
+    <link rel="stylesheet" href="css/bscode.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="span-5 config"
+      style="background-color: #b8b8b8; padding-right: 0.25em; height: 100%">
+        <div style="text-align: center; padding: 0.5em;">
+          <img style="float:left;width:100%;" src="bscode.svg" />
+
+          <br />
+          Version 2.1
+
+        </div>
+        <div style="text-align: right;">
+          <h2 class="cpn cpn_tutorial" sect="tutorial">Tutorial</h2>
+          <!--<h2 class="cpn cpn_settings" sect="settings">Settings</h2>-->
+          <h2 class="cpn cpn_codes" sect="codes">Code Reference</h2>
+          <h2 class="cpn cpn_macros" sect="macros">Macros</h2>
+          <h2 class="cpn cpn_forum" sect="forum">Forum</h2>
+          <h2 class="cpn cpn_changes" sect="changes">Changes</h2>
+          <!--<h2 class="cpn cpn_faqs" sect="faqs">FAQs</h2>
+          <h2 class="cpn cpn_about" sect="about">About</h2>
+          <h2 class="cpn cpn_terms" sect="terms">Terms &amp; Conditions</h2>-->
+
+        </div>
+      </div>
+      <div class="span-18 cpages last" style="padding: 0.25em; ">
+      <div class="cpage" id="changes">
+      <h1>Changes for v2.1</h1>
+      <ul>
+      <li>Detect cloned textareas (e.g. http://reddit.com comments)</li>
+      </ul>
+      </div>
+        <div class="cpage" id="tutorial"><h1>Tutorial</h1>
+        <h2>What is <b>\code</b>?</h2>
+        <div class="mnote">How to pronounce; Reason to exist</div>
+        <p>
+        \code (pronounced /ˈbækˌslæʃ,kəʊd/) is a Google Chrome extension that adds macros and mnemonics to
+        common form fields on the Internet. With \code you won't need to remember
+        obscure UNICODE hexadecimal numbers or HTML entity codes, you only need
+        to remember there are \codes and \\macros.
+        <div class="mnote">UNICODE; \codes and \\macros </div>
+        <p class="bscode">\codes are short mnemonics for UNICODE symbols\---a collection of numbers defined to represent glpyhs in many of the world\aposs languages. A mnemonic is a brief word used to remember something, in <b>\code</b> there are many mnemonics for various UNICODE characters.</p>
+        <h3><b>Try It Here</b></h3>
+        <textarea cols="40" rows="8" style="height:10em; width: 70%; margin-left: 6%;font-size: 2em;">Enter any of the text you see in the list below into this space and watch what happens\...</textarea>
+        <p>Type the following into the text area:
+        <div class="mnote">Examples of <b>\code</b> before replacing or expansion</div>
+        <ul>
+        <li><code>A \subset B \notequals C</code></li>
+        <li><code>\\lod</code></li>
+        <li><code>\odqFind a job you love and you\aposll never work a day in your life.\cdq\----Confucius</code></li>
+        <li><code>\\creep</code></li>
+        <li><code>\blackstar \rarr \star</code></li>
+        <li><code>a\^2 + b\^2 = c\^2</code></li>
+        <li><code>\\lincoln</code></li>
+        </ul>
+
+        </p>
+        <div class="mnote">Macros and Mnemonics</div>
+        <p>As you can see, there are two different kinds of BScodes: <b>\\macros</b> and <b>\mnemonics</b> and they are replaced by with their symbols or text whenever you pause during typing. Macros can be very short chunks of text or relatively long form letters to be reused, as with Abraham Lincoln's <i>Gettysburg Address</i>.</p>
+        <div class="mnote"><code>\\enable</code> and <code>\\disable</code></div><p>Notice the red-border on the right side of the field? This is your cue to know that <b>\code</b> is supported in that field. You can use these anywhere on the Internet that uses supported fields. If you wish to disable \code in a field temporarilly, enter in <code>\\disable</code>, and the right border will change to a dotted border. To turn <b>\code</b>  back on, enter in <code>\\enable</code>. Try it for yourself in the field above and watch the right border.</p>
+        <div class="mnote"><a href="http://wxfzit.com/support/forum/"><b>\code</b> Forums</a></div>
+        <p>Want to learn more about <b>\code</b> and meet other users? Try the <a href="http://wxfzit.com/support/forum/">Forums</a>!</p>
+        <script type="text/javascript">
+        var textareas = $("textarea:not(.bscode)");
+          $(textareas).bind('keyup',bscode.textareaBind).addClass('bscode').css('border-right','3px solid red');
+          $(textareas).bind('change',bscode.textareaBind);
+        </script>
+        </p>
+        </div>
+
+        <div class="cpage" id="settings">
+          <h1>Settings</h1>
+        </div>
+        <div class="cpage" id="forum">
+          <h1>Forum</h1>
+          <iframe style="width: 100%; height: 100%" src="http://wxfzit.com/support/forum/" frameborder="0"></iframe>
+        </div>
+        <div class="cpage" id="macros">
+          <h1>Macros</h1>
+          <h2 onclick="cpn_header_togglenext(this)">Built-In Macros</h2>
+          <!--<button onclick="$('.macro').empty();$('.macro').html(bscode.macroreferenceStr());$('button').button();">Refresh</button>-->
+          <div class="macro">
+          </div>
+          <h2 onclick="cpn_header_togglenext(this)">User Macros</h2>
+          <!--<button onclick="bscode.loadMacros();$('.macro-user').empty();$('.macro-user').html(bscode.macroreferenceStr(userMacros));$('button').button();bscode.saveMacros();">Refresh</button>-->
+          <button onclick="$('#bundlecreate').dialog(dlg_bundlecreate)">Create Bundle</button>
+          <button class="bscode" onclick="$('#bundleexport').dialog(dlg_bundleexportall)">\uarr Export All</button>
+          <button class="bscode" onclick="$('#bundleimport').dialog(dlg_bundleimport)">\darr Import</button>
+          <div class="macro-user">
+          </div>
+        </div>
+        <div class="cpage" id="faqs"><h1>Frequently Asked Questions</h1></div>
+        <div class="cpage" id="about"><h1>About <b>\code</b></h1></div>
+        <div class="cpage" id="codes">
+          <h1><b>\code</b> Reference</h1>
+          <p>
+            \codes are mnemonics for UNICODE characters.
+          </p>
+          <script type="text/javascript">
+            bscode.reference();
+            bscode.filterDom(".bscode");
+            cpn_show_page('tutorial');
+            cpn_macro_display_refresh();
+          </script>
+        </div>
+      </div>
+    </div>
+    <div id="bundlecreate" style="display:none" title="Create Bundle">
+    <label for="createBundleName">Bundle Name: </label>
+    <input type="text" name="createBundleName" id="createBundleName"/>
+    </div>
+    <div id="bundlerename" style="display:none" title="Rename Bundle">
+    <p class="bscode">Renaming bundle \odq<span class="bname"></span>\cdq:</p>
+    <label for="editBundleName">New Name</label>
+    <input type="text" id="editBundleName" name="editBundleName" value=""/>
+    </div>
+    <div id="bundledelete" style="display:none" title="Delete Bundle?" class="bscode">
+    <p class="bscode">Are you sure you want to delete \odq<span class="bname"></span>\cdq?</p>
+    </div>
+    <div id="macrocreate" style="display:none" title="Create Macro">
+    <p class="bscode">Creating new macro in bundle \odq<span class="bname"></span>\cdq:</p>
+    <label for="createMacroName">Macro</label>
+    <input type="text" id="createMacroName" name="createMacroName" value=""/>
+    <textarea name="createMacroText" id="createMacroText" cols="30" rows="10"></textarea>
+    </div>
+    <div id="macroedit" style="display:none" title="Edit Macro">
+    <label for="editMacroName">Macro</label>
+    <input type="text" id="editMacroName" name="editMacroName" value=""/>
+    <textarea name="editMacroText" id="editMacroText" cols="30" rows="10"></textarea>
+    </div>
+    <div id="macrodelete" style="display:none" title="Delete Macro?">
+    <p class="bscode">Are you sure you want to delete \odq<span class="mname"></span>\cdq from the \odq<span class="bname"></span>\cdq bundle?</p>
+    <pre class="bexp"></pre>
+    </div>
+    <div id="bundleexport" style="display:none" title="Export Bundle">
+    <textarea name="export" id="export" cols="30" rows="10">
+    </textarea>
+    </div>
+    <div id="bundleimport" style="display:none" title="Import Bundles">
+    <div id="importerror"></div>
+    <textarea name="import" id="import" cols="30" rows="10">
+    </textarea>
+    </div>
+  </body>
+</html>
+

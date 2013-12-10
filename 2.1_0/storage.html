@@ -1,0 +1,18 @@
+<head>
+<script type="text/javascript" src="js/bscode.js"></script>
+</head>
+<body>
+<script type="text/javascript">
+bscode.loadMacros();
+chrome.extension.onRequest.addListener(
+  function(request, sender, sendResponse) {
+    console.log("request",request,sender,sendResponse);
+    sendResponse({d: userMacros});
+  });
+chrome.extension.onRequest.addListener(
+  function(request, sender, sendResponse) {
+    sendResponse({d: userMacros});
+  });
+
+</script>
+

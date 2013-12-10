@@ -1,0 +1,47 @@
+<head>
+
+<link rel="stylesheet" href="css/bscodeui/jquery-ui-1.8.8.custom.css" />
+<script type="text/javascript" src="js/jquery-1.4.4.min.js"></script>
+<script type="text/javascript" src="js/jquery-ui-1.8.8.custom.min.js"></script>
+<script type="text/javascript" src="js/bscode.js"></script>
+</head>
+<body>
+<style>
+body {
+  min-width:569px;
+  overflow-x:hidden;
+  font-size: 11px;
+}
+.ui-tabs { font-size: 10px; }
+.reference { font-size: 1.5em; overflow: auto; whitespace: no-wrap; }
+.reference dt, .reference dd { width: auto; text-align: right;
+float: left; }
+.reference dd { width: 1.5em; text-align: left; margin-left: 0.5em;
+margin-right: 1em; }
+</style>
+<div class="bscode">
+<div style="float: right;font-size: 10px;"><button onclick="chrome.browserAction.setBadgeText({text:'on'});bscode.enable()">Enable</button>
+<button onclick="chrome.browserAction.setBadgeText({text:'off'});bscode.disable()">Disable</button>
+</div>
+<img style="float:left;margin-right: 0.5em;" src="icon_48.png"/> <h1 style="margin-top:0.75em;margin-bottom: 0.5em;">\code and \\macros for Google Chrome</h1>
+Version 1.
+</div>
+<div style="clear:both">&nbsp;</div>
+<script>
+bscode.tabreference();
+$("button").button();
+function en() {
+  bscode.enable();
+}
+function dis() {
+  bscode.enable();
+}
+function updateBadge() {
+  chrome.browserAction.setBadgeText({text:bscode.isEnabled()?"on":"off"});
+}
+</script>
+
+<a style="float: left; margin-right: 0.5em;" href="http://www.twitter.com/GoBScode" target="_blank"><img style="margin-top: 3px;"src="http://twitter-badges.s3.amazonaws.com/follow_me-a.png" alt="Follow GoBScode on Twitter"/></a>
+<h2 style="margin-top:0.5em;"> for News, Hints and Tips and More.</h2>
+</body>
+
